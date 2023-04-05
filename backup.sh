@@ -39,6 +39,21 @@ while [[ $# -gt 0 ]]; do
         shift # past argument
         shift # past value
         ;;
+        --sftp-user)
+        sftp_user="$2"
+        shift # past argument
+        shift # past value
+        ;;
+        --sftp-host)
+        sftp_host="$2"
+        shift # past argument
+        shift # past value
+        ;;
+        --sftp-path)
+        sftp_backup_path="$2"
+        shift # past argument
+        shift # past value
+        ;;
         -h|--help)
         echo "Usage: $0 [options]"
         echo "Options:"
@@ -46,6 +61,9 @@ while [[ $# -gt 0 ]]; do
         echo "  -n, --name NAME     Name of the backup"
         echo "  -t, --target DIR    Target directory for the backup (default: $HOME/backup)"
         echo "      --type TYPE     Type of backup (local, aws, sftp)"
+        echo "      --sftp-user USER  SFTP username"
+        echo "      --sftp-host HOST  SFTP hostname"
+        echo "      --sftp-path PATH  SFTP backup path"
         echo "  -h, --help          Show this help message and exit"
         exit 0
         ;;

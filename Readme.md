@@ -49,5 +49,5 @@ $ ./backup.sh --dir /home/user/documents
 Create a backup of the /home/user/documents directory and upload it to an SFTP server:
 
 ```
-$./backup.sh --dir /home/user/documents --type sftp --name my-backup --target /backup --sftp-user user --sftp-host sftp.example.com --sftp-backup-path /backups
+$./backup.sh --dir /home/user/documents --type sftp --name my-backup --target /backup --sftp-user user --sftp-host sftp.example.com --sftp-path /backups
 ```
