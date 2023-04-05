@@ -1,0 +1,12 @@
+# PhpStorm project files
+.idea/
+
+# Ignore composer vendor directory
+/vendor/
+
+# Ignore environment configuration files
+/.env
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
