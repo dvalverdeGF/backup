@@ -1,0 +1,9 @@
+#!/bin/bash
+
+prefix="$1"
+n=1
+while [[ -e "$prefix-$n.tar" ]]; do
+  ((n++))
+done
+mv "$prefix.tar" "$prefix-$n.tar"
+echo "$prefix-$n.tar"
